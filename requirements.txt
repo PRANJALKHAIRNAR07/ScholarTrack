@@ -1,0 +1,10 @@
+# Core Tabular ML & Web Framework (Logistic Regression, Random Forest, MLP)
+pandas>=2.0.0
+numpy>=1.24.0
+scikit-learn>=1.3.0
+streamlit>=1.30.0
+plotly>=5.18.0
+joblib>=1.3.0
+
+# Optional: Longitudinal / Sequential Deep Learning Extensions (for sequential datasets such as OULAD)
+# tensorflow>=2.15.0

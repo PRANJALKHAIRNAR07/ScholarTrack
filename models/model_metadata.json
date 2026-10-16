@@ -1,0 +1,1471 @@
+{
+  "trained_at": "2026-10-16T21:06:49.008327",
+  "dataset_file": "data/data.csv",
+  "delimiter": ";",
+  "target_column": "Target",
+  "target_definition": "At Risk = Dropout (1), Not at Risk = Graduate or Enrolled (0)",
+  "total_samples": 4424,
+  "train_samples": 3539,
+  "test_samples": 885,
+  "features_total_count": 30,
+  "leakage_features_excluded": [
+    "Curricular units 2nd sem (credited)",
+    "Curricular units 2nd sem (enrolled)",
+    "Curricular units 2nd sem (evaluations)",
+    "Curricular units 2nd sem (approved)",
+    "Curricular units 2nd sem (grade)",
+    "Curricular units 2nd sem (without evaluations)"
+  ],
+  "class_distribution_before_split": {
+    "total": 4424,
+    "at_risk_count": 1421,
+    "not_at_risk_count": 3003,
+    "at_risk_pct": 32.12,
+    "not_at_risk_pct": 67.88
+  },
+  "class_distribution_train": {
+    "total": 3539,
+    "at_risk_count": 1137,
+    "not_at_risk_count": 2402,
+    "at_risk_pct": 32.13,
+    "not_at_risk_pct": 67.87
+  },
+  "class_distribution_test": {
+    "total": 885,
+    "at_risk_count": 284,
+    "not_at_risk_count": 601,
+    "at_risk_pct": 32.09,
+    "not_at_risk_pct": 67.91
+  },
+  "features": {
+    "numerical": [
+      "Application order",
+      "Previous qualification (grade)",
+      "Admission grade",
+      "Age at enrollment",
+      "Curricular units 1st sem (credited)",
+      "Curricular units 1st sem (enrolled)",
+      "Curricular units 1st sem (evaluations)",
+      "Curricular units 1st sem (approved)",
+      "Curricular units 1st sem (grade)",
+      "Curricular units 1st sem (without evaluations)",
+      "Unemployment rate",
+      "Inflation rate",
+      "GDP"
+    ],
+    "categorical": [
+      "Marital status",
+      "Application mode",
+      "Course",
+      "Daytime/evening attendance",
+      "Previous qualification",
+      "Nacionality",
+      "Mother's qualification",
+      "Father's qualification",
+      "Mother's occupation",
+      "Father's occupation",
+      "Displaced",
+      "Educational special needs",
+      "Debtor",
+      "Tuition fees up to date",
+      "Gender",
+      "Scholarship holder",
+      "International"
+    ]
+  },
+  "feature_defaults": {
+    "Application order": 1.0,
+    "Previous qualification (grade)": 133.1,
+    "Admission grade": 126.0,
+    "Age at enrollment": 20.0,
+    "Curricular units 1st sem (credited)": 0.0,
+    "Curricular units 1st sem (enrolled)": 6.0,
+    "Curricular units 1st sem (evaluations)": 8.0,
+    "Curricular units 1st sem (approved)": 5.0,
+    "Curricular units 1st sem (grade)": 12.333333333333334,
+    "Curricular units 1st sem (without evaluations)": 0.0,
+    "Unemployment rate": 11.1,
+    "Inflation rate": 1.4,
+    "GDP": 0.32,
+    "Marital status": 1,
+    "Application mode": 1,
+    "Course": 9500,
+    "Daytime/evening attendance": 1,
+    "Previous qualification": 1,
+    "Nacionality": 1,
+    "Mother's qualification": 1,
+    "Father's qualification": 37,
+    "Mother's occupation": 9,
+    "Father's occupation": 9,
+    "Displaced": 1,
+    "Educational special needs": 0,
+    "Debtor": 0,
+    "Tuition fees up to date": 1,
+    "Gender": 0,
+    "Scholarship holder": 0,
+    "International": 0
+  },
+  "logistic_regression": {
+    "model_name": "Logistic Regression",
+    "accuracy": 0.8587570621468926,
+    "precision": 0.7676767676767676,
+    "recall": 0.8028169014084507,
+    "f1_score": 0.7848537005163512,
+    "roc_auc": 0.9126455906821963,
+    "confusion_matrix": [
+      [
+        532,
+        69
+      ],
+      [
+        56,
+        228
+      ]
+    ],
+    "classification_report": {
+      "0": {
+        "precision": 0.9047619047619048,
+        "recall": 0.8851913477537438,
+        "f1-score": 0.894869638351556,
+        "support": 601.0
+      },
+      "1": {
+        "precision": 0.7676767676767676,
+        "recall": 0.8028169014084507,
+        "f1-score": 0.7848537005163512,
+        "support": 284.0
+      },
+      "accuracy": 0.8587570621468926,
+      "macro avg": {
+        "precision": 0.8362193362193362,
+        "recall": 0.8440041245810972,
+        "f1-score": 0.8398616694339536,
+        "support": 885.0
+      },
+      "weighted avg": {
+        "precision": 0.8607707421266744,
+        "recall": 0.8587570621468926,
+        "f1-score": 0.8595650888089592,
+        "support": 885.0
+      }
+    },
+    "hyperparameters": {
+      "max_iter": 1000,
+      "class_weight": "balanced",
+      "random_state": 42,
+      "solver": "lbfgs"
+    }
+  },
+  "random_forest": {
+    "model_name": "Random Forest",
+    "accuracy": 0.8553672316384181,
+    "precision": 0.7888888888888889,
+    "recall": 0.75,
+    "f1_score": 0.7689530685920578,
+    "roc_auc": 0.907574816620187,
+    "confusion_matrix": [
+      [
+        544,
+        57
+      ],
+      [
+        71,
+        213
+      ]
+    ],
+    "classification_report": {
+      "0": {
+        "precision": 0.8845528455284553,
+        "recall": 0.9051580698835274,
+        "f1-score": 0.8947368421052632,
+        "support": 601.0
+      },
+      "1": {
+        "precision": 0.7888888888888889,
+        "recall": 0.75,
+        "f1-score": 0.7689530685920578,
+        "support": 284.0
+      },
+      "accuracy": 0.8553672316384181,
+      "macro avg": {
+        "precision": 0.8367208672086721,
+        "recall": 0.8275790349417638,
+        "f1-score": 0.8318449553486604,
+        "support": 885.0
+      },
+      "weighted avg": {
+        "precision": 0.8538539035107865,
+        "recall": 0.8553672316384181,
+        "f1-score": 0.8543723317349238,
+        "support": 885.0
+      }
+    },
+    "hyperparameters": {
+      "n_estimators": 100,
+      "max_depth": null,
+      "class_weight": "balanced",
+      "random_state": 42,
+      "n_jobs": -1
+    }
+  },
+  "mlp": {
+    "model_name": "Multi-Layer Perceptron (MLP)",
+    "accuracy": 0.8124293785310734,
+    "precision": 0.6676136363636364,
+    "recall": 0.8274647887323944,
+    "f1_score": 0.7389937106918238,
+    "roc_auc": 0.8982681446415597,
+    "confusion_matrix": [
+      [
+        484,
+        117
+      ],
+      [
+        49,
+        235
+      ]
+    ],
+    "classification_report": {
+      "0": {
+        "precision": 0.9080675422138836,
+        "recall": 0.8053244592346089,
+        "f1-score": 0.8536155202821869,
+        "support": 601.0
+      },
+      "1": {
+        "precision": 0.6676136363636364,
+        "recall": 0.8274647887323944,
+        "f1-score": 0.7389937106918238,
+        "support": 284.0
+      },
+      "accuracy": 0.8124293785310734,
+      "macro avg": {
+        "precision": 0.78784058928876,
+        "recall": 0.8163946239835016,
+        "f1-score": 0.7963046154870054,
+        "support": 885.0
+      },
+      "weighted avg": {
+        "precision": 0.830904932878889,
+        "recall": 0.8124293785310734,
+        "f1-score": 0.8168329282780479,
+        "support": 885.0
+      }
+    },
+    "hyperparameters": {
+      "hidden_layer_sizes": [
+        64,
+        32
+      ],
+      "activation": "relu",
+      "solver": "adam",
+      "alpha": 0.001,
+      "learning_rate_init": 0.001,
+      "batch_size": 32,
+      "max_iter": 200,
+      "early_stopping": true,
+      "validation_fraction": 0.1,
+      "n_iter_no_change": 15,
+      "random_state": 42,
+      "sample_weighting": "balanced (inverse frequency)"
+    },
+    "convergence": {
+      "converged": true,
+      "actual_iterations": 27,
+      "stopped_by": "early_stopping"
+    }
+  },
+  "feature_analysis": [
+    {
+      "feature": "Curricular units 1st sem (approved)",
+      "coefficient": -2.328918943458853,
+      "odds_ratio": 0.0974009861677974
+    },
+    {
+      "feature": "Mother's occupation_191",
+      "coefficient": -1.771583888846965,
+      "odds_ratio": 0.17006341384889498
+    },
+    {
+      "feature": "Mother's occupation_0",
+      "coefficient": 1.4106023789908702,
+      "odds_ratio": 4.098423464833475
+    },
+    {
+      "feature": "Father's qualification_22",
+      "coefficient": 1.3218462860737006,
+      "odds_ratio": 3.7503391881815706
+    },
+    {
+      "feature": "Father's occupation_90",
+      "coefficient": 1.2796554890506557,
+      "odds_ratio": 3.5954008572170855
+    },
+    {
+      "feature": "Course_9853",
+      "coefficient": 1.2786587879501154,
+      "odds_ratio": 3.5918191024917654
+    },
+    {
+      "feature": "Mother's qualification_4",
+      "coefficient": -1.2661382363623244,
+      "odds_ratio": 0.2819182238735086
+    },
+    {
+      "feature": "Tuition fees up to date_1",
+      "coefficient": -1.2266020379260687,
+      "odds_ratio": 0.2932874661136313
+    },
+    {
+      "feature": "Tuition fees up to date_0",
+      "coefficient": 1.2086802092094644,
+      "odds_ratio": 3.3490616737337535
+    },
+    {
+      "feature": "Mother's occupation_8",
+      "coefficient": 1.1566092214195522,
+      "odds_ratio": 3.1791352359179417
+    },
+    {
+      "feature": "Nacionality_109",
+      "coefficient": 1.1385172926205245,
+      "odds_ratio": 3.122135717936025
+    },
+    {
+      "feature": "Course_171",
+      "coefficient": -1.0669445818228918,
+      "odds_ratio": 0.34405815460141354
+    },
+    {
+      "feature": "Mother's qualification_34",
+      "coefficient": 1.0561601121771156,
+      "odds_ratio": 2.875308900635955
+    },
+    {
+      "feature": "Previous qualification_2",
+      "coefficient": 1.0105169129543206,
+      "odds_ratio": 2.747020618623112
+    },
+    {
+      "feature": "Application mode_15",
+      "coefficient": -1.0059013067540188,
+      "odds_ratio": 0.3657148649366227
+    },
+    {
+      "feature": "Nacionality_26",
+      "coefficient": -0.985731620244211,
+      "odds_ratio": 0.37316611115895004
+    },
+    {
+      "feature": "Curricular units 1st sem (enrolled)",
+      "coefficient": 0.9506927822228779,
+      "odds_ratio": 2.587501613646726
+    },
+    {
+      "feature": "Course_9130",
+      "coefficient": 0.9256232497478604,
+      "odds_ratio": 2.523440504014891
+    },
+    {
+      "feature": "Father's occupation_163",
+      "coefficient": -0.8787537809985518,
+      "odds_ratio": 0.41530014425318323
+    },
+    {
+      "feature": "Father's qualification_40",
+      "coefficient": 0.7971759692778907,
+      "odds_ratio": 2.2192647986998573
+    },
+    {
+      "feature": "Previous qualification_4",
+      "coefficient": 0.7874884497721145,
+      "odds_ratio": 2.197869429030327
+    },
+    {
+      "feature": "Father's occupation_4",
+      "coefficient": 0.7314283571484685,
+      "odds_ratio": 2.0780466816959753
+    },
+    {
+      "feature": "Course_9003",
+      "coefficient": -0.7248445495256458,
+      "odds_ratio": 0.4843998632914665
+    },
+    {
+      "feature": "Previous qualification_12",
+      "coefficient": -0.7206457964090519,
+      "odds_ratio": 0.48643801457987346
+    },
+    {
+      "feature": "Nacionality_41",
+      "coefficient": 0.7129597552547344,
+      "odds_ratio": 2.040020292794093
+    },
+    {
+      "feature": "Father's occupation_123",
+      "coefficient": -0.6908746045899847,
+      "odds_ratio": 0.5011375801140001
+    },
+    {
+      "feature": "Mother's occupation_90",
+      "coefficient": 0.6894417875295102,
+      "odds_ratio": 1.992602926934066
+    },
+    {
+      "feature": "Mother's occupation_144",
+      "coefficient": -0.6864601748619945,
+      "odds_ratio": 0.5033547068200265
+    },
+    {
+      "feature": "Father's occupation_9",
+      "coefficient": 0.6863526676048268,
+      "odds_ratio": 1.9864570351162725
+    },
+    {
+      "feature": "Mother's qualification_40",
+      "coefficient": 0.671829242879817,
+      "odds_ratio": 1.9578153669002947
+    },
+    {
+      "feature": "Father's occupation_171",
+      "coefficient": -0.6588260964174957,
+      "odds_ratio": 0.5174584243876664
+    },
+    {
+      "feature": "Course_9254",
+      "coefficient": 0.6308039112914743,
+      "odds_ratio": 1.8791206184974756
+    },
+    {
+      "feature": "Mother's qualification_9",
+      "coefficient": 0.6304866329126679,
+      "odds_ratio": 1.8785245087254288
+    },
+    {
+      "feature": "Mother's occupation_134",
+      "coefficient": -0.6237193983740487,
+      "odds_ratio": 0.5359473242605259
+    },
+    {
+      "feature": "Mother's qualification_12",
+      "coefficient": 0.6171732600302556,
+      "odds_ratio": 1.8536807555006178
+    },
+    {
+      "feature": "Mother's occupation_123",
+      "coefficient": 0.5842714157209052,
+      "odds_ratio": 1.793683659733029
+    },
+    {
+      "feature": "Application mode_5",
+      "coefficient": -0.5751214040425263,
+      "odds_ratio": 0.5626365583078026
+    },
+    {
+      "feature": "Nacionality_6",
+      "coefficient": -0.5735224479344231,
+      "odds_ratio": 0.5635369090882166
+    },
+    {
+      "feature": "Father's qualification_31",
+      "coefficient": 0.5693120983176927,
+      "odds_ratio": 1.767051075838065
+    },
+    {
+      "feature": "Curricular units 1st sem (credited)",
+      "coefficient": 0.5667540304074089,
+      "odds_ratio": 1.7625366157945928
+    },
+    {
+      "feature": "Father's qualification_9",
+      "coefficient": -0.5477668267686759,
+      "odds_ratio": 0.5782396789667907
+    },
+    {
+      "feature": "Mother's occupation_192",
+      "coefficient": -0.5452539822738955,
+      "odds_ratio": 0.5796945325055565
+    },
+    {
+      "feature": "Father's qualification_11",
+      "coefficient": -0.5335829025446929,
+      "odds_ratio": 0.5864998289437305
+    },
+    {
+      "feature": "Mother's qualification_2",
+      "coefficient": -0.5331602952202122,
+      "odds_ratio": 0.5867477404481679
+    },
+    {
+      "feature": "Father's qualification_30",
+      "coefficient": -0.5317173196270853,
+      "odds_ratio": 0.5875950142676635
+    },
+    {
+      "feature": "Father's occupation_134",
+      "coefficient": -0.5269960894015471,
+      "odds_ratio": 0.5903757446784235
+    },
+    {
+      "feature": "Course_9238",
+      "coefficient": -0.5208460791058669,
+      "odds_ratio": 0.5940177492902711
+    },
+    {
+      "feature": "Nacionality_25",
+      "coefficient": -0.5172722103983521,
+      "odds_ratio": 0.5961444888164341
+    },
+    {
+      "feature": "Father's occupation_10",
+      "coefficient": 0.512755730312927,
+      "odds_ratio": 1.6698866173358844
+    },
+    {
+      "feature": "Father's qualification_10",
+      "coefficient": 0.5094172403252016,
+      "odds_ratio": 1.6643210131095576
+    },
+    {
+      "feature": "Father's occupation_193",
+      "coefficient": -0.5034821026953054,
+      "odds_ratio": 0.6044223305073643
+    },
+    {
+      "feature": "Course_9556",
+      "coefficient": 0.4952225693252684,
+      "odds_ratio": 1.640863404278996
+    },
+    {
+      "feature": "Father's occupation_1",
+      "coefficient": 0.4946243575576832,
+      "odds_ratio": 1.63988211402051
+    },
+    {
+      "feature": "Father's qualification_14",
+      "coefficient": -0.49064589436403583,
+      "odds_ratio": 0.6122308300092402
+    },
+    {
+      "feature": "Application mode_7",
+      "coefficient": 0.48945600005431383,
+      "odds_ratio": 1.6314284815071072
+    },
+    {
+      "feature": "Father's qualification_43",
+      "coefficient": -0.4701584738852698,
+      "odds_ratio": 0.6249032295926739
+    },
+    {
+      "feature": "Course_8014",
+      "coefficient": -0.46221651404765596,
+      "odds_ratio": 0.6298859460211106
+    },
+    {
+      "feature": "Mother's occupation_5",
+      "coefficient": 0.4585996787843982,
+      "odds_ratio": 1.5818573249664643
+    },
+    {
+      "feature": "Nacionality_24",
+      "coefficient": -0.45432100535521097,
+      "odds_ratio": 0.634878901004925
+    },
+    {
+      "feature": "Father's qualification_4",
+      "coefficient": 0.4434757962368858,
+      "odds_ratio": 1.5581135025464283
+    },
+    {
+      "feature": "Mother's qualification_11",
+      "coefficient": 0.43460354590331574,
+      "odds_ratio": 1.5443506734167893
+    },
+    {
+      "feature": "Mother's occupation_2",
+      "coefficient": 0.4343668697220032,
+      "odds_ratio": 1.5439852056472616
+    },
+    {
+      "feature": "Mother's occupation_194",
+      "coefficient": -0.4302712602865634,
+      "odds_ratio": 0.6503326613706326
+    },
+    {
+      "feature": "Father's qualification_34",
+      "coefficient": 0.4249959970664068,
+      "odds_ratio": 1.5295842968267586
+    },
+    {
+      "feature": "Application mode_39",
+      "coefficient": 0.42177679608464613,
+      "odds_ratio": 1.524668174794749
+    },
+    {
+      "feature": "Nacionality_100",
+      "coefficient": 0.4162775647417855,
+      "odds_ratio": 1.5163066837393218
+    },
+    {
+      "feature": "Father's qualification_2",
+      "coefficient": 0.41511538166998435,
+      "odds_ratio": 1.514545481397828
+    },
+    {
+      "feature": "Marital status_1",
+      "coefficient": 0.4140553567824879,
+      "odds_ratio": 1.5129408761053251
+    },
+    {
+      "feature": "Father's occupation_3",
+      "coefficient": 0.4128131977962292,
+      "odds_ratio": 1.5110627297200896
+    },
+    {
+      "feature": "Father's occupation_152",
+      "coefficient": 0.4101330121833638,
+      "odds_ratio": 1.5070182235664655
+    },
+    {
+      "feature": "Father's qualification_39",
+      "coefficient": -0.40475918249817366,
+      "odds_ratio": 0.6671374498894102
+    },
+    {
+      "feature": "Course_9119",
+      "coefficient": -0.4012090825283705,
+      "odds_ratio": 0.6695100635460741
+    },
+    {
+      "feature": "Application mode_43",
+      "coefficient": -0.40080304510395864,
+      "odds_ratio": 0.6697819648852182
+    },
+    {
+      "feature": "Mother's qualification_10",
+      "coefficient": 0.39798452477509494,
+      "odds_ratio": 1.4888209898893414
+    },
+    {
+      "feature": "Debtor_0",
+      "coefficient": -0.3970603136081849,
+      "odds_ratio": 0.6722934759645266
+    },
+    {
+      "feature": "Previous qualification_38",
+      "coefficient": -0.3941202486004082,
+      "odds_ratio": 0.6742729709842937
+    },
+    {
+      "feature": "Mother's occupation_10",
+      "coefficient": -0.3890328626531227,
+      "odds_ratio": 0.6777119982337032
+    },
+    {
+      "feature": "Father's qualification_41",
+      "coefficient": -0.38336633678667276,
+      "odds_ratio": 0.6815631718843138
+    },
+    {
+      "feature": "Debtor_1",
+      "coefficient": 0.3791384848915856,
+      "odds_ratio": 1.461025351671689
+    },
+    {
+      "feature": "Father's occupation_7",
+      "coefficient": 0.37634707252735244,
+      "odds_ratio": 1.4569527142902383
+    },
+    {
+      "feature": "Mother's occupation_7",
+      "coefficient": 0.3699395683398114,
+      "odds_ratio": 1.4476471283005476
+    },
+    {
+      "feature": "Application mode_18",
+      "coefficient": 0.36702735882996423,
+      "odds_ratio": 1.4434374093336184
+    },
+    {
+      "feature": "Application mode_51",
+      "coefficient": 0.3643905913045374,
+      "odds_ratio": 1.4396364138206827
+    },
+    {
+      "feature": "Unemployment rate",
+      "coefficient": 0.3601357860127578,
+      "odds_ratio": 1.43352405386086
+    },
+    {
+      "feature": "Nacionality_22",
+      "coefficient": -0.3597592036308297,
+      "odds_ratio": 0.6978443442254739
+    },
+    {
+      "feature": "Application mode_42",
+      "coefficient": 0.3593404834221101,
+      "odds_ratio": 1.432384421703341
+    },
+    {
+      "feature": "Course_9500",
+      "coefficient": -0.3575828691017931,
+      "odds_ratio": 0.6993647408133963
+    },
+    {
+      "feature": "Marital status_3",
+      "coefficient": -0.3558351607534116,
+      "odds_ratio": 0.7005880951313638
+    },
+    {
+      "feature": "Father's qualification_19",
+      "coefficient": -0.3468742992538289,
+      "odds_ratio": 0.7068941797991447
+    },
+    {
+      "feature": "Previous qualification_15",
+      "coefficient": -0.3451534610139963,
+      "odds_ratio": 0.7081116775931923
+    },
+    {
+      "feature": "Father's qualification_38",
+      "coefficient": -0.33619389866903593,
+      "odds_ratio": 0.7144845547798421
+    },
+    {
+      "feature": "Mother's occupation_1",
+      "coefficient": 0.33582655418260027,
+      "odds_ratio": 1.3990963363572098
+    },
+    {
+      "feature": "Nacionality_101",
+      "coefficient": 0.3336170551900158,
+      "odds_ratio": 1.3960084470119254
+    },
+    {
+      "feature": "Father's qualification_37",
+      "coefficient": -0.3312419164205755,
+      "odds_ratio": 0.7180314444311022
+    },
+    {
+      "feature": "Mother's qualification_19",
+      "coefficient": -0.33034626457161526,
+      "odds_ratio": 0.7186748387075448
+    },
+    {
+      "feature": "Mother's occupation_132",
+      "coefficient": -0.32552069136674217,
+      "odds_ratio": 0.7221512378154253
+    },
+    {
+      "feature": "Father's occupation_6",
+      "coefficient": -0.32526988753949404,
+      "odds_ratio": 0.722332378824201
+    },
+    {
+      "feature": "Course_9085",
+      "coefficient": -0.3237132887362219,
+      "odds_ratio": 0.7234576361005002
+    },
+    {
+      "feature": "Mother's occupation_141",
+      "coefficient": -0.3233826008535119,
+      "odds_ratio": 0.7236969143354385
+    },
+    {
+      "feature": "Marital status_4",
+      "coefficient": -0.3185838554998242,
+      "odds_ratio": 0.7271780975160149
+    },
+    {
+      "feature": "Mother's qualification_26",
+      "coefficient": -0.3091862957396985,
+      "odds_ratio": 0.7340440080161243
+    },
+    {
+      "feature": "Course_9773",
+      "coefficient": 0.3077566307716356,
+      "odds_ratio": 1.3603698764803638
+    },
+    {
+      "feature": "Father's occupation_0",
+      "coefficient": 0.3055511182489494,
+      "odds_ratio": 1.3573728698649694
+    },
+    {
+      "feature": "Nacionality_11",
+      "coefficient": -0.30483188648149234,
+      "odds_ratio": 0.7372473052126023
+    },
+    {
+      "feature": "Course_9991",
+      "coefficient": 0.3023225786430046,
+      "odds_ratio": 1.3529976044538612
+    },
+    {
+      "feature": "Application mode_44",
+      "coefficient": -0.29932389018381655,
+      "odds_ratio": 0.7413192645139683
+    },
+    {
+      "feature": "Marital status_6",
+      "coefficient": 0.29836789087724475,
+      "odds_ratio": 1.347657487587597
+    },
+    {
+      "feature": "Application mode_10",
+      "coefficient": 0.2917509591578084,
+      "odds_ratio": 1.338769567819035
+    },
+    {
+      "feature": "Age at enrollment",
+      "coefficient": 0.2896520828409995,
+      "odds_ratio": 1.335962602846083
+    },
+    {
+      "feature": "Mother's occupation_4",
+      "coefficient": 0.285532605215579,
+      "odds_ratio": 1.330470454952296
+    },
+    {
+      "feature": "Scholarship holder_1",
+      "coefficient": -0.2853482397305056,
+      "odds_ratio": 0.7517524186715558
+    },
+    {
+      "feature": "Mother's occupation_151",
+      "coefficient": -0.28106820649043335,
+      "odds_ratio": 0.7549768394034705
+    },
+    {
+      "feature": "Father's occupation_144",
+      "coefficient": -0.28065430978102474,
+      "odds_ratio": 0.7552893865096267
+    },
+    {
+      "feature": "Mother's qualification_35",
+      "coefficient": -0.2782237409870477,
+      "odds_ratio": 0.7571274021297387
+    },
+    {
+      "feature": "Previous qualification_43",
+      "coefficient": -0.26940526796837105,
+      "odds_ratio": 0.7638336356072182
+    },
+    {
+      "feature": "Mother's qualification_44",
+      "coefficient": 0.26870159697537493,
+      "odds_ratio": 1.3082646926525754
+    },
+    {
+      "feature": "Application mode_27",
+      "coefficient": 0.26796236582496846,
+      "odds_ratio": 1.3072979400096483
+    },
+    {
+      "feature": "Scholarship holder_0",
+      "coefficient": 0.2674264110138999,
+      "odds_ratio": 1.3065974751147327
+    },
+    {
+      "feature": "Gender_0",
+      "coefficient": -0.2583766653056521,
+      "odds_ratio": 0.7723042770874518
+    },
+    {
+      "feature": "Mother's occupation_171",
+      "coefficient": -0.25805191813153283,
+      "odds_ratio": 0.7725551214472901
+    },
+    {
+      "feature": "Father's occupation_8",
+      "coefficient": 0.2552153437248782,
+      "odds_ratio": 1.2907395436085256
+    },
+    {
+      "feature": "Nacionality_105",
+      "coefficient": 0.25116925951970653,
+      "odds_ratio": 1.285527653711068
+    },
+    {
+      "feature": "Mother's qualification_3",
+      "coefficient": -0.2491586126240777,
+      "odds_ratio": 0.7794563319652477
+    },
+    {
+      "feature": "Application mode_17",
+      "coefficient": 0.24622853542464893,
+      "odds_ratio": 1.2791918807988703
+    },
+    {
+      "feature": "Father's qualification_3",
+      "coefficient": -0.24471934289832414,
+      "odds_ratio": 0.7829242406581193
+    },
+    {
+      "feature": "Father's occupation_175",
+      "coefficient": -0.24468492351139548,
+      "odds_ratio": 0.7829511888942625
+    },
+    {
+      "feature": "Gender_1",
+      "coefficient": 0.24045483658904665,
+      "odds_ratio": 1.2718274924643787
+    },
+    {
+      "feature": "Father's qualification_5",
+      "coefficient": 0.22989478406340472,
+      "odds_ratio": 1.2584675921169886
+    },
+    {
+      "feature": "Mother's qualification_39",
+      "coefficient": -0.22222836471593999,
+      "odds_ratio": 0.800732484407447
+    },
+    {
+      "feature": "Course_9147",
+      "coefficient": -0.22123016329340922,
+      "odds_ratio": 0.8015321757725768
+    },
+    {
+      "feature": "Father's occupation_194",
+      "coefficient": 0.22109856598002087,
+      "odds_ratio": 1.2474463802796314
+    },
+    {
+      "feature": "Father's qualification_1",
+      "coefficient": -0.21359833521719876,
+      "odds_ratio": 0.8076727335717305
+    },
+    {
+      "feature": "Father's qualification_29",
+      "coefficient": 0.21334175072603218,
+      "odds_ratio": 1.237807600614055
+    },
+    {
+      "feature": "Application mode_53",
+      "coefficient": -0.21099128813495374,
+      "odds_ratio": 0.8097811215543945
+    },
+    {
+      "feature": "Mother's qualification_6",
+      "coefficient": -0.20951961866905655,
+      "odds_ratio": 0.8109737290518186
+    },
+    {
+      "feature": "Father's qualification_26",
+      "coefficient": -0.20848260338900074,
+      "odds_ratio": 0.8118151574121966
+    },
+    {
+      "feature": "Father's occupation_103",
+      "coefficient": 0.20835545376940673,
+      "odds_ratio": 1.231650886700424
+    },
+    {
+      "feature": "Father's occupation_161",
+      "coefficient": -0.20354207161058682,
+      "odds_ratio": 0.8158358800711913
+    },
+    {
+      "feature": "Mother's occupation_99",
+      "coefficient": 0.203476075411169,
+      "odds_ratio": 1.225655833978554
+    },
+    {
+      "feature": "Course_33",
+      "coefficient": 0.20292190361694606,
+      "odds_ratio": 1.224976798254539
+    },
+    {
+      "feature": "Father's qualification_12",
+      "coefficient": -0.20060558954690574,
+      "odds_ratio": 0.8182350883920122
+    },
+    {
+      "feature": "Application mode_57",
+      "coefficient": -0.19401795573257657,
+      "odds_ratio": 0.8236431150202895
+    },
+    {
+      "feature": "Displaced_0",
+      "coefficient": -0.1916331236090029,
+      "odds_ratio": 0.8256097096462979
+    },
+    {
+      "feature": "Father's occupation_181",
+      "coefficient": -0.18924924154557168,
+      "odds_ratio": 0.8275802136158725
+    },
+    {
+      "feature": "Mother's qualification_37",
+      "coefficient": 0.18542935570291472,
+      "odds_ratio": 1.2037351597471362
+    },
+    {
+      "feature": "Father's occupation_182",
+      "coefficient": -0.18191156039199646,
+      "odds_ratio": 0.8336750670516422
+    },
+    {
+      "feature": "Mother's qualification_5",
+      "coefficient": -0.18154170436780875,
+      "odds_ratio": 0.833983463825093
+    },
+    {
+      "feature": "Mother's occupation_175",
+      "coefficient": -0.18086031606461406,
+      "odds_ratio": 0.8345519240514816
+    },
+    {
+      "feature": "Father's occupation_102",
+      "coefficient": -0.18019712518443887,
+      "odds_ratio": 0.8351055748443312
+    },
+    {
+      "feature": "Displaced_1",
+      "coefficient": 0.17371129489239612,
+      "odds_ratio": 1.1897120402913515
+    },
+    {
+      "feature": "Father's occupation_5",
+      "coefficient": 0.17210919561157242,
+      "odds_ratio": 1.1878075295022585
+    },
+    {
+      "feature": "Mother's occupation_6",
+      "coefficient": 0.17189787247535152,
+      "odds_ratio": 1.1875565448102674
+    },
+    {
+      "feature": "Application mode_16",
+      "coefficient": -0.17074307454773813,
+      "odds_ratio": 0.8430381436055586
+    },
+    {
+      "feature": "Mother's occupation_152",
+      "coefficient": -0.16923696592844711,
+      "odds_ratio": 0.8443088072585803
+    },
+    {
+      "feature": "Nacionality_21",
+      "coefficient": 0.16473602101906215,
+      "odds_ratio": 1.1790818248071195
+    },
+    {
+      "feature": "Previous qualification_3",
+      "coefficient": 0.1613677245818036,
+      "odds_ratio": 1.17511700878377
+    },
+    {
+      "feature": "Daytime/evening attendance_0",
+      "coefficient": -0.15989393540465086,
+      "odds_ratio": 0.852234176045717
+    },
+    {
+      "feature": "Mother's occupation_3",
+      "coefficient": 0.1578065335754342,
+      "odds_ratio": 1.1709396352879342
+    },
+    {
+      "feature": "Father's occupation_192",
+      "coefficient": -0.1577741963410366,
+      "odds_ratio": 0.8540426061428381
+    },
+    {
+      "feature": "Mother's occupation_193",
+      "coefficient": 0.14955208884102017,
+      "odds_ratio": 1.161313960734834
+    },
+    {
+      "feature": "Mother's occupation_143",
+      "coefficient": -0.14893266568205746,
+      "odds_ratio": 0.8616271300208528
+    },
+    {
+      "feature": "Daytime/evening attendance_1",
+      "coefficient": 0.1419721066880523,
+      "odds_ratio": 1.152544499805373
+    },
+    {
+      "feature": "Father's occupation_112",
+      "coefficient": -0.1392500572949307,
+      "odds_ratio": 0.8700104487963071
+    },
+    {
+      "feature": "Father's occupation_121",
+      "coefficient": -0.13869395955455485,
+      "odds_ratio": 0.8704943941889842
+    },
+    {
+      "feature": "Previous qualification_39",
+      "coefficient": -0.13775100794935202,
+      "odds_ratio": 0.8713156154003849
+    },
+    {
+      "feature": "Previous qualification_42",
+      "coefficient": -0.1369277726003704,
+      "odds_ratio": 0.8720332085485981
+    },
+    {
+      "feature": "Nacionality_103",
+      "coefficient": 0.13685760822528453,
+      "odds_ratio": 1.1466648612506947
+    },
+    {
+      "feature": "Application mode_1",
+      "coefficient": -0.13570706512042469,
+      "odds_ratio": 0.873098355993494
+    },
+    {
+      "feature": "Mother's occupation_131",
+      "coefficient": -0.13548314787781976,
+      "odds_ratio": 0.8732938796596341
+    },
+    {
+      "feature": "Mother's qualification_14",
+      "coefficient": -0.13379488373332843,
+      "odds_ratio": 0.8747694756516867
+    },
+    {
+      "feature": "Curricular units 1st sem (without evaluations)",
+      "coefficient": -0.12880872313222155,
+      "odds_ratio": 0.8791421090130368
+    },
+    {
+      "feature": "Nacionality_17",
+      "coefficient": 0.12592157734280127,
+      "odds_ratio": 1.1341932183492658
+    },
+    {
+      "feature": "Curricular units 1st sem (grade)",
+      "coefficient": -0.12564226514004723,
+      "odds_ratio": 0.8819302875658804
+    },
+    {
+      "feature": "Mother's occupation_122",
+      "coefficient": -0.12284323725776235,
+      "odds_ratio": 0.8844022930231868
+    },
+    {
+      "feature": "Father's occupation_132",
+      "coefficient": -0.12123886477849133,
+      "odds_ratio": 0.8858223425623154
+    },
+    {
+      "feature": "Course_9070",
+      "coefficient": -0.12061034995401453,
+      "odds_ratio": 0.8863792700367219
+    },
+    {
+      "feature": "Mother's qualification_1",
+      "coefficient": -0.1196085432062164,
+      "odds_ratio": 0.8872676957116679
+    },
+    {
+      "feature": "Father's occupation_172",
+      "coefficient": -0.11749741097883488,
+      "odds_ratio": 0.8891428137530317
+    },
+    {
+      "feature": "International_1",
+      "coefficient": -0.11631588220978499,
+      "odds_ratio": 0.8901939824380093
+    },
+    {
+      "feature": "Father's occupation_135",
+      "coefficient": -0.10934801147122464,
+      "odds_ratio": 0.8964183993224513
+    },
+    {
+      "feature": "Previous qualification (grade)",
+      "coefficient": 0.10436393207186398,
+      "odds_ratio": 1.1100043475983739
+    },
+    {
+      "feature": "Mother's qualification_42",
+      "coefficient": -0.10286247940504065,
+      "odds_ratio": 0.9022510430505035
+    },
+    {
+      "feature": "Curricular units 1st sem (evaluations)",
+      "coefficient": -0.1024901781508617,
+      "odds_ratio": 0.9025870147828834
+    },
+    {
+      "feature": "International_0",
+      "coefficient": 0.09839405349319164,
+      "odds_ratio": 1.1033974970911027
+    },
+    {
+      "feature": "Nacionality_1",
+      "coefficient": 0.098394053493185,
+      "odds_ratio": 1.1033974970910954
+    },
+    {
+      "feature": "Mother's qualification_36",
+      "coefficient": -0.0983010083788225,
+      "odds_ratio": 0.9063760359070552
+    },
+    {
+      "feature": "Mother's occupation_125",
+      "coefficient": -0.095782210797557,
+      "odds_ratio": 0.9086618912689728
+    },
+    {
+      "feature": "Father's occupation_124",
+      "coefficient": -0.095782210797557,
+      "odds_ratio": 0.9086618912689728
+    },
+    {
+      "feature": "Mother's qualification_29",
+      "coefficient": -0.09244635963211853,
+      "odds_ratio": 0.9116981134750793
+    },
+    {
+      "feature": "Application mode_2",
+      "coefficient": 0.08964224217632069,
+      "odds_ratio": 1.093782904308441
+    },
+    {
+      "feature": "Father's occupation_151",
+      "coefficient": -0.08907389470429079,
+      "odds_ratio": 0.9147779738289833
+    },
+    {
+      "feature": "Nacionality_14",
+      "coefficient": -0.08599498468903773,
+      "odds_ratio": 0.917598833252098
+    },
+    {
+      "feature": "Application order",
+      "coefficient": 0.08559649523859274,
+      "odds_ratio": 1.0893666749697182
+    },
+    {
+      "feature": "Educational special needs_0",
+      "coefficient": -0.08520357792517573,
+      "odds_ratio": 0.9183253146084575
+    },
+    {
+      "feature": "Father's qualification_20",
+      "coefficient": 0.07939962205100716,
+      "odds_ratio": 1.082636881205437
+    },
+    {
+      "feature": "Mother's occupation_9",
+      "coefficient": 0.07878723365511513,
+      "odds_ratio": 1.0819740899059858
+    },
+    {
+      "feature": "Father's qualification_25",
+      "coefficient": 0.0773074452628071,
+      "odds_ratio": 1.080374181262038
+    },
+    {
+      "feature": "Application mode_26",
+      "coefficient": 0.07711186862409723,
+      "odds_ratio": 1.0801629059720468
+    },
+    {
+      "feature": "Father's qualification_6",
+      "coefficient": 0.07710462043772487,
+      "odds_ratio": 1.0801550767783656
+    },
+    {
+      "feature": "Mother's qualification_43",
+      "coefficient": -0.07547586530107793,
+      "odds_ratio": 0.9273021104211766
+    },
+    {
+      "feature": "GDP",
+      "coefficient": 0.07274871175232078,
+      "odds_ratio": 1.075460252434186
+    },
+    {
+      "feature": "Previous qualification_40",
+      "coefficient": -0.07145497038756686,
+      "odds_ratio": 0.9310382009403075
+    },
+    {
+      "feature": "Father's occupation_131",
+      "coefficient": -0.06969338274016361,
+      "odds_ratio": 0.9326797517776796
+    },
+    {
+      "feature": "Educational special needs_1",
+      "coefficient": 0.06728174920857423,
+      "odds_ratio": 1.0695967937750306
+    },
+    {
+      "feature": "Father's occupation_99",
+      "coefficient": -0.06296184486390836,
+      "odds_ratio": 0.9389792998886266
+    },
+    {
+      "feature": "Inflation rate",
+      "coefficient": -0.06261429705564066,
+      "odds_ratio": 0.9393056968022921
+    },
+    {
+      "feature": "Previous qualification_19",
+      "coefficient": 0.062111356491022514,
+      "odds_ratio": 1.0640808304382767
+    },
+    {
+      "feature": "Father's qualification_27",
+      "coefficient": 0.061819287854691984,
+      "odds_ratio": 1.0637700911819894
+    },
+    {
+      "feature": "Mother's qualification_22",
+      "coefficient": -0.059516642306680675,
+      "odds_ratio": 0.9422198527489977
+    },
+    {
+      "feature": "Admission grade",
+      "coefficient": -0.05915044452802237,
+      "odds_ratio": 0.9425649547500187
+    },
+    {
+      "feature": "Mother's qualification_38",
+      "coefficient": -0.057567734350527214,
+      "odds_ratio": 0.9440579430690977
+    },
+    {
+      "feature": "Nacionality_62",
+      "coefficient": -0.05564647818430806,
+      "odds_ratio": 0.9458734636951284
+    },
+    {
+      "feature": "Previous qualification_6",
+      "coefficient": -0.04935706804892017,
+      "odds_ratio": 0.9518411969334811
+    },
+    {
+      "feature": "Previous qualification_10",
+      "coefficient": 0.04786498193175475,
+      "odds_ratio": 1.0490290078920255
+    },
+    {
+      "feature": "Father's occupation_2",
+      "coefficient": 0.04708731339109129,
+      "odds_ratio": 1.0482135281619083
+    },
+    {
+      "feature": "Nacionality_2",
+      "coefficient": -0.04690381333204722,
+      "odds_ratio": 0.9541791724917713
+    },
+    {
+      "feature": "Father's qualification_36",
+      "coefficient": -0.04508473322045123,
+      "odds_ratio": 0.9559164805195205
+    },
+    {
+      "feature": "Previous qualification_9",
+      "coefficient": 0.04458024224500886,
+      "odds_ratio": 1.0455888737429528
+    },
+    {
+      "feature": "Father's qualification_35",
+      "coefficient": 0.04000941410191493,
+      "odds_ratio": 1.040820572537212
+    },
+    {
+      "feature": "Course_9670",
+      "coefficient": 0.03796601805295884,
+      "odds_ratio": 1.0386959353684946
+    },
+    {
+      "feature": "Marital status_2",
+      "coefficient": -0.037852192748331445,
+      "odds_ratio": 0.9628552473618435
+    },
+    {
+      "feature": "Father's occupation_183",
+      "coefficient": -0.036810685828924945,
+      "odds_ratio": 0.9638585901678983
+    },
+    {
+      "feature": "Father's occupation_122",
+      "coefficient": -0.03520014637607035,
+      "odds_ratio": 0.9654121731718853
+    },
+    {
+      "feature": "Father's occupation_154",
+      "coefficient": -0.02823587347922252,
+      "odds_ratio": 0.9721590332219319
+    },
+    {
+      "feature": "Father's occupation_101",
+      "coefficient": -0.026874093316156825,
+      "odds_ratio": 0.9734838019258636
+    },
+    {
+      "feature": "Mother's qualification_30",
+      "coefficient": 0.023907031541273507,
+      "odds_ratio": 1.024195095624881
+    },
+    {
+      "feature": "Marital status_5",
+      "coefficient": -0.018073867374762142,
+      "odds_ratio": 0.9820884853807071
+    },
+    {
+      "feature": "Mother's occupation_153",
+      "coefficient": -0.017148184832850903,
+      "odds_ratio": 0.982998008446101
+    },
+    {
+      "feature": "Father's occupation_174",
+      "coefficient": -0.014892336579344386,
+      "odds_ratio": 0.9852180058338331
+    },
+    {
+      "feature": "Mother's qualification_41",
+      "coefficient": 0.014879517957171481,
+      "odds_ratio": 1.0149907690873476
+    },
+    {
+      "feature": "Nacionality_13",
+      "coefficient": -0.012388365873783707,
+      "odds_ratio": 0.9876880540326244
+    },
+    {
+      "feature": "Father's occupation_143",
+      "coefficient": -0.012264946197203879,
+      "odds_ratio": 0.9878099616955622
+    },
+    {
+      "feature": "Father's occupation_195",
+      "coefficient": -0.011414994654719348,
+      "odds_ratio": 0.9886499092029607
+    },
+    {
+      "feature": "Previous qualification_1",
+      "coefficient": -0.008536312081616936,
+      "odds_ratio": 0.991500018779674
+    },
+    {
+      "feature": "Father's qualification_44",
+      "coefficient": 0.007298518264939346,
+      "odds_ratio": 1.0073252173644678
+    },
+    {
+      "feature": "Father's qualification_33",
+      "coefficient": 0.003361614643034304,
+      "odds_ratio": 1.0033672712061577
+    },
+    {
+      "feature": "Previous qualification_5",
+      "coefficient": 0.0015004083670271224,
+      "odds_ratio": 1.0015015345428318
+    }
+  ],
+  "sequential_lstm_audit": {
+    "dataset_nature": "Static cross-sectional (4,424 single-row student records)",
+    "has_temporal_dimension": false,
+    "lstm_status": "Not trained (no genuine longitudinal/sequential observations in data.csv)",
+    "policy": "Per scientific standard and project requirements, static attributes are not converted into artificial time-steps."
+  }
+}
